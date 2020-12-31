@@ -15,6 +15,8 @@ export class AtletaCreateComponent implements OnInit {
   atleta: Atleta = {
     name: '',
     idade: null,
+    peso: null,
+    objetivo: '',
     email: ''
   }
 
