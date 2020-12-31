@@ -1,0 +1,35 @@
+<!-- Binding de Atributo -->
+<!-- <p [id]="propLegal">atleta-create works!</p> -->
+<!-- Binding de Evento -->
+<!-- <button (click)="fazerAlgo()">Codando e Relaxando!</button> -->
+
+<mat-card>
+    <mat-card-title>Novo Atleta</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome Completo" [(ngModel)]="atleta.name" name="name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Idade" [(ngModel)]="atleta.idade" name="idade">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Email (preferencialmente, gmail)" [(ngModel)]="atleta.email" name="email">
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="createAtleta()" color="primary">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+
+</mat-card>
+
+
+
+
+
