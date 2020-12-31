@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class AtletaReadComponent implements OnInit {
 
   atletas: Atleta[]
-  displayedColumns = ['id', 'name', 'idade', 'peso','objetivo', 'email']
+  displayedColumns = ['id', 'name', 'idade', 'peso','objetivo', 'email', 'action']
   constructor(private atletaService: AtletaService) { }
 
   ngOnInit(): void {
