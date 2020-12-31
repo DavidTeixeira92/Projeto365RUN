@@ -25,4 +25,8 @@ export class AtletaService {
     return this.http.post<Atleta>(this.baseUrl, atleta)
   }
 
+  read(): Observable<Atleta[]>{
+    return this.http.get<Atleta[]>(this.baseUrl)
+  }
+
 }

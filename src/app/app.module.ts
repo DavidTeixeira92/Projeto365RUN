@@ -26,6 +26,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { AtletaReadComponent } from './components/atleta/atleta-read/atleta-read.component';
+import { AtletaRead2Component } from './components/atleta/atleta-read2/atleta-read2.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
@@ -38,7 +43,9 @@ import { MatInputModule } from '@angular/material/input';
     AtletaCrudComponent,
     RedDirective,
     ForDirective,
-    AtletaCreateComponent
+    AtletaCreateComponent,
+    AtletaReadComponent,
+    AtletaRead2Component
   ],
   imports: [
     BrowserModule,
@@ -53,7 +60,10 @@ import { MatInputModule } from '@angular/material/input';
     HttpClientModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
