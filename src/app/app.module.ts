@@ -31,6 +31,7 @@ import { AtletaRead2Component } from './components/atleta/atleta-read2/atleta-re
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { AtletaUpdateComponent } from './components/atleta/atleta-update/atleta-update.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { MatSortModule } from '@angular/material/sort';
     ForDirective,
     AtletaCreateComponent,
     AtletaReadComponent,
-    AtletaRead2Component
+    AtletaRead2Component,
+    AtletaUpdateComponent
   ],
   imports: [
     BrowserModule,
