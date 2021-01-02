@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-card-title>Exclusão de Atleta</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome Completo" [value]="atleta.name" name="name" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Idade" [value]="atleta.idade" name="idade" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Peso (em kg)" [value]="atleta.peso" name="peso" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Objetivo" [value]="atleta.objetivo" name="objetivo" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Email (preferencialmente, gmail)" [value]="atleta.email" name="email" disabled>
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="deleteAtleta()" color="warn">
+        Excluir
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+
+</mat-card>
