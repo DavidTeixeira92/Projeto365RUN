@@ -1,3 +1,4 @@
+import { AtletaDeleteComponent } from './components/atleta/atleta-delete/atleta-delete.component';
 import { AtletaUpdateComponent } from './components/atleta/atleta-update/atleta-update.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: "atletas/update/:id",
     component: AtletaUpdateComponent
+  },
+  {
+    path: "atletas/delete/:id",
+    component: AtletaDeleteComponent
   }
 ];
 

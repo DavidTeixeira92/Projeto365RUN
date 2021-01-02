@@ -29,7 +29,7 @@ export class AtletaService {
     return this.http.get<Atleta[]>(this.baseUrl)
   }
 
-  readById(id: string): Observable<Atleta> {
+  readById(id: number): Observable<Atleta> {
     const url = ` ${this.baseUrl}/${id}`
     return this.http.get<Atleta>(url)
 
@@ -42,7 +42,7 @@ export class AtletaService {
 
   }
 
-  delete(id: string): Observable<Atleta> {
+  delete(id: number): Observable<Atleta> {
 
     const url = `${this.baseUrl}/${id}`;
     return this.http.delete<Atleta>(url);
