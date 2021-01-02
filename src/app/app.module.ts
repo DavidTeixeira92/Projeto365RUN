@@ -27,11 +27,11 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { AtletaReadComponent } from './components/atleta/atleta-read/atleta-read.component';
-import { AtletaRead2Component } from './components/atleta/atleta-read2/atleta-read2.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { AtletaUpdateComponent } from './components/atleta/atleta-update/atleta-update.component';
+import { AtletaDeleteComponent } from './components/atleta/atleta-delete/atleta-delete.component';
 
 
 @NgModule({
@@ -46,8 +46,8 @@ import { AtletaUpdateComponent } from './components/atleta/atleta-update/atleta-
     ForDirective,
     AtletaCreateComponent,
     AtletaReadComponent,
-    AtletaRead2Component,
-    AtletaUpdateComponent
+    AtletaUpdateComponent,
+    AtletaDeleteComponent
   ],
   imports: [
     BrowserModule,

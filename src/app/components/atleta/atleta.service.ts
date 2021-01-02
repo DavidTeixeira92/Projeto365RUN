@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar'
 import { Observable } from 'rxjs';
-import { url } from 'inspector';
 
 @Injectable({
   providedIn: 'root'
@@ -26,20 +25,28 @@ export class AtletaService {
     return this.http.post<Atleta>(this.baseUrl, atleta)
   }
 
-  read(): Observable<Atleta[]>{
+  read(): Observable<Atleta[]> {
     return this.http.get<Atleta[]>(this.baseUrl)
   }
 
-  readById(id: string): Observable<Atleta>{
+  readById(id: string): Observable<Atleta> {
     const url = ` ${this.baseUrl}/${id}`
     return this.http.get<Atleta>(url)
 
   }
 
-  update(atleta: Atleta): Observable<Atleta>{
-    
+  update(atleta: Atleta): Observable<Atleta> {
+
     const url = ` ${this.baseUrl}/${atleta.id}`
     return this.http.put<Atleta>(url, atleta)
 
   }
+
+  delete(id: string): Observable<Atleta> {
+
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.delete<Atleta>(url);
+    
+  }
+
 }
