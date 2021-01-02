@@ -12,7 +12,8 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 })
 export class AtletaService {
 
-  baseUrl = "http://localhost:3001/atletas"
+  // baseUrl = "http://localhost:3001/atletas"
+  baseUrl = "https://projeto-365-run.herokuapp.com/"
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
