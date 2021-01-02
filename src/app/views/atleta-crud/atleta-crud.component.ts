@@ -1,3 +1,4 @@
+import { HeaderService } from './../../components/template/header/header.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
 @Component({
@@ -7,7 +8,16 @@ import { Router } from '@angular/router'
 })
 export class AtletaCrudComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private headerService: HeaderService) { 
+
+      headerService.headerData = {
+        title: 'Cadastro de Atletas',
+        icon: 'person_pin',
+        routeUrl: '/atletas'
+      }
+
+    }
 
   ngOnInit(): void {
   }
