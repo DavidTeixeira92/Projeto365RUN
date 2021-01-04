@@ -1,6 +1,6 @@
 import { AtletaService } from './../atleta.service';
 import { Atleta } from './../atleta.model';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-atleta-read',
@@ -9,17 +9,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AtletaReadComponent implements OnInit {
 
-  atletas: Atleta[]
-  displayedColumns = ['id', 'name', 'idade', 'peso','objetivo', 'email', 'action']
-  constructor(private atletaService: AtletaService) { }
+  public atletas: Atleta[]
+  public displayedColumns = []
+  public innerWidth: any;
+
+  constructor(private atletaService: AtletaService) {}
 
   ngOnInit(): void {
-
     this.atletaService.read().subscribe(atletas => {
       this.atletas = atletas
       console.log(atletas)
     })
-  
+    this.innerWidth = window.innerWidth
+
+    if (this.innerWidth <=760) {
+      this.displayedColumns = ['name', 'objetivo', 'action'];
+    } else {
+      this.displayedColumns = ['id', 'name', 'idade', 'peso','objetivo', 'email', 'action']
+    }
   }
 
+  @HostListener('window:resize', ['$event'])
+  onresize(event) {
+  this.innerWidth = window.innerWidth;
+  if (this.innerWidth <=760) {
+      this.displayedColumns = ['name', 'objetivo', 'action'];
+    } else {
+      this.displayedColumns = ['id', 'name', 'idade', 'peso','objetivo', 'email', 'action']
+    }
+  }
 }
