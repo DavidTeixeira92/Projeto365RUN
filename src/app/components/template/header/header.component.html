@@ -1,17 +1,26 @@
 <mat-toolbar class="header mat-elevation-z5">
-    <span>
-        <a routerLink="/">
-            <img class="logo" src="assets/img/icon2.png" alt="logo">
-        </a>
-    </span>
-    <span class="title-group">
-        <a routerLink="{{ routeUrl }}">
-            <i class="material-icons">
-                <!-- run_circle -->
-                {{ icon }}
-            </i>
-            <!-- Projeto Fitness 365 Run -->
-            {{ title }}
-        </a>
-    </span>
+  <span>
+    <a routerLink="/">
+      <img class="logo" src="assets/img/icon2.png" alt="logo">
+    </a>
+  </span>
+  <span class="title-group">
+      <a routerLink="{{ routeUrl }}">
+          <i class="material-icons">
+              <!-- run_circle -->
+              {{ icon }}
+          </i>
+          <!-- Projeto Fitness 365 Run -->
+          {{ title }}
+      </a>
+  </span>
+  <div class="buttons">
+    <a class="button" mat-list-item routerLink="/">
+      Início
+  </a>
+  <a class="button" mat-list-item routerLink="/atletas">
+      Atletas
+  </a>
+
+  </div>
 </mat-toolbar>
